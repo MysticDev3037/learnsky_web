@@ -41,6 +41,87 @@
 
                 <div id="lista-ambientes"></div>
             </section>
+
+
+            <!-- Area Dentro do Ambiente==================-->
+            <section id="tela-ambiente" hidden>
+                <button id="voltar-inicio">← Voltar</button>
+
+                <h2 id="titulo-ambiente"></h2>
+
+                <p id="descricao-ambiente-aberto"></p>
+                <button id="criar-caderno">+ Criar caderno</button>
+
+                <div id="lista-cadernos">
+                    <p>Nenhum caderno criado ainda.</p>
+                </div>
+            </section>
+            <dialog id="modal-caderno">
+                <h2>Criar caderno</h2>
+
+                <form id="form-caderno">
+                    <label for="nome-caderno">Nome do caderno</label>
+                    <input
+                        type="text"
+                        id="nome-caderno"
+                        placeholder="Ex.: Banco de Dados"
+                        required
+                    >
+
+                    <label for="descricao-caderno">Descrição (opcional)</label>
+                    <textarea
+                        id="descricao-caderno"
+                        placeholder="Sobre o que é este caderno?"
+                    ></textarea>
+
+                    <div class="acoes-modal">
+                        <button type="button" id="cancelar-caderno">
+                            Cancelar
+                        </button>
+
+                        <button type="submit">Criar caderno</button>
+                    </div>
+                </form>
+            </dialog>
+
+            <!-- Tela dentro do caderno===============================-->
+            <section id="tela-caderno" hidden>
+                <button id="voltar-ambiente">← Voltar aos ambientes</button>
+
+                <h2 id="titulo-caderno"></h2>
+
+                <p id="descricao-caderno-aberto"></p>
+
+                <button type="button" id="criar-pagina">+ Criar página</button>
+
+                <div id="lista-paginas">
+                    <p>Nenhuma página criada ainda.</p>
+                </div>
+            </section>
+
+
+            <!-- Tela de paginas===================================-->
+            <dialog id="modal-pagina">
+                <h2>Criar página</h2>
+
+                <form id="form-pagina">
+                    <label for="titulo-pagina">Título da página</label>
+                    <input
+                        type="text"
+                        id="titulo-pagina"
+                        placeholder="Ex.: Introdução ao SQL"
+                        required
+                    >
+
+                    <div class="acoes-modal">
+                        <button type="button" id="cancelar-pagina">
+                            Cancelar
+                        </button>
+
+                        <button type="submit">Criar página</button>
+                    </div>
+                </form>
+            </dialog>
         </main>
 
 
@@ -75,7 +156,5 @@
             </form>
         </dialog>
 <!--==========================================================-->
-
     </body>
-
 </html>
