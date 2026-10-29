@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <!-- Conteudo vizualizado pela maquina --> 
+    <head>
+        <!-- Descreve os atributos adicionados de metadados --> 
+        <meta charset="UTF-8">
+        <title>LearnSky</title>
+        <!-- Conexão entre arquivos-->
+        <link rel="stylesheet" href="estilo.css">
+        <!--executar JavaScript, usamos "src" para buscar arquivo externo-->
+        <script src="script.js" defer></script>
+        <!--Adaptar a qualquer tamanho de tela-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <!--Tag para conteúdo para o usuario final-->
+    
+    <body>
+        <!-- Cabeçalho principal -->
+        <header>
+            <h1>LearnSky</h1>
+        </header>
+
+        <!-- Conteúdo principal da página -->
+        <main>
+            <section id="inicio">
+                <h2>Organize seus estudos</h2>
+                <p>Seu conhecimento, conectado em um só lugar.</p>
+
+                <button id="criar-ambiente">
+                    + Criar ambiente
+                </button>
+            </section>
+
+            <!-- Área onde os ambientes serão exibidos -->
+            <section id="ambientes">
+                <h2>Meus ambientes</h2>
+
+                <p id="mensagem-vazia">
+                    Você ainda não criou nenhum ambiente.
+                </p>
+
+                <div id="lista-ambientes"></div>
+            </section>
+        </main>
+
+
+<!-- Janela para criar um ambiente ==========================================-->
+        <dialog id="modal-ambiente">
+            <h2>Criar ambiente</h2>
+
+            <form id="form-ambiente">
+                <label for="nome-ambiente">Nome do ambiente</label>
+                <input
+                    type="text"
+                    id="nome-ambiente"
+                    placeholder="Ex.: Faculdade"
+                    required
+                >
+
+                <label for="descricao-ambiente">Descrição (opcional)</label>
+                <textarea
+                    id="descricao-ambiente"
+                    placeholder="Sobre o que é este ambiente?"
+                ></textarea>
+
+                <div class="acoes-modal">
+                    <button type="button" id="cancelar-ambiente">
+                        Cancelar
+                    </button>
+
+                    <button type="submit">
+                        Criar ambiente
+                    </button>
+                </div>
+            </form>
+        </dialog>
+<!--==========================================================-->
+
+    </body>
+
+</html>

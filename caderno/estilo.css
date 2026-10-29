@@ -1,0 +1,134 @@
+
+/* Configurações gerais da página */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f7fb;
+    color: #202938;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #ffffff;
+    padding: 20px 32px;
+    border-bottom: 1px solid #e1e5ec;
+}
+
+/* Título do cabeçalho */
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+/* Conteúdo principal */
+main {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 24px;
+}
+
+/* Área de boas-vindas */
+#inicio {
+    margin-bottom: 48px;
+}
+
+/* Botão de criação */
+#criar-ambiente {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: #252525;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Efeito ao passar o mouse */
+#criar-ambiente:hover {
+    background-color: #707070;
+}
+
+
+
+/*==============================================*/
+
+
+/* Janela modal */
+#modal-ambiente {
+    width: 90%;
+    max-width: 420px;
+    padding: 24px;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+}
+
+/* Fundo escurecido atrás da janela */
+#modal-ambiente::backdrop {
+    background-color: rgb(0 0 0 / 50%);
+}
+
+/* Campos do formulário */
+#form-ambiente {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#form-ambiente input,
+#form-ambiente textarea {
+    padding: 10px;
+    border: 1px solid #aaa;
+    border-radius: 6px;
+    font: inherit;
+}
+
+#form-ambiente textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+
+/* Botões da janela */
+.acoes-modal {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+
+/*Ambientes =========================*/
+
+/* Lista de ambientes */
+#lista-ambientes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+/* Cartão individual de cada ambiente */
+#lista-ambientes article {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #fff;
+    transition: border-color 0.2s, transform 0.2s;
+}
+
+/* Efeito ao passar o mouse pelo cartão */
+#lista-ambientes article:hover {
+    border-color: #333;
+    transform: translateY(-2px);
+}
+
+/* Título do cartão */
+#lista-ambientes article h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+/* Descrição do ambiente */
+#lista-ambientes article p {
+    margin-bottom: 0;
+    color: #555;
+    line-height: 1.5;
+}
